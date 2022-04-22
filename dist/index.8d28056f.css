@@ -1,0 +1,36 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 50px;
+  background-color: #333;
+  align-items: center;
+  display: flex;
+}
+
+nav .logo {
+  color: #fff;
+  padding: 10px;
+}
+
+.job {
+  border: 1px solid gray;
+  display: flex;
+}
+
+.job .title {
+  width: 30%;
+  text-align: center;
+  background-color: #ccc;
+  flex-direction: column;
+  flex-basis: 30%;
+  display: flex;
+}
+
+.job .about {
+  display: flex;
+}
+
+/*# sourceMappingURL=index.8d28056f.css.map */
