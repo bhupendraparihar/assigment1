@@ -1,31 +1,126 @@
+$nav-dark: #323333;
+$white-text: #fff;
+
 * {
     padding: 0;
     margin: 0;
 }
+
+html {
+    font-size: 10px;
+
+    @media screen and (min-width: 900px) {
+        font-size: 18px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        font-size: 20px;
+    }
+}
+
 nav {
-    background-color: #333;
-    height: 50px;
+    background-color: $nav-dark;
+    height: 5rem;
     display: flex;
     align-items: center;
 
     .logo {
-        color: #fff;
+        color: $white-text;
         padding: 10px;
+        font-size: 2rem;
     }
 }
 
 .job {
-    border: 1px solid GREY;
-    display: flex;
+    border: 1px solid #f7f6f7;
+    font-size: 2rem;
+    padding: 10px;
+    margin-top: 2rem;
+
     .title {
-        background-color: #CCC;
-        width: 30%;
+        background-color: #f7f6f7;
         display: flex;
         flex-direction: column;
         text-align: center;
         flex-basis: 30%;
     }
+
     .about {
+        li {
+            display: flex;
+        }
+
+        .job-description {
+            text-align: justify;
+        }
+    }
+
+    .label {
+        max-width: 100px;
+        width: 100px;
+    }
+
+
+}
+
+.thumbs-wrapper {
+    display: flex;
+    justify-content: center;
+    border: 1px solid #808080;
+    margin: 0 auto;
+
+    div {
+        width: 100px;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .up {
+        background-color: #808080;
+    }
+}
+
+@media only screen and (min-width: 768px) { 
+    nav {
+        background-color: #333;
+        height: 50px;
         display: flex;
+        align-items: center;
+    
+        .logo {
+            color: #fff;
+            padding: 10px;
+        }
+    }
+    
+    .job {
+        border: 1px solid GREY;
+        display: flex;
+        font-size: 1rem;
+    
+        .title {
+            background-color: #CCC;
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            flex-basis: 30%;
+        }
+        .about {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+    
+            li {
+                display: flex;
+                justify-content: space-between;
+            }
+    
+            .job-description {
+                grid-column-start: 1;
+                grid-column-end: 4;
+            }
+        }
+    
+    
     }
 }
